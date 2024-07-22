@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Protest Riot", sans-serif;;
+}
+
+.box{ 
+    height: 100vh;
+    width: 100%;    
+}
+.quote-title{
+    display: flex;
+justify-content: center;
+align-items: baseline;
+
+}
+#ijoke{
+   width: 2em;
+   margin-left: 10px;
+}
+
+div.box-quote{ 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+img.iquote1{
+width: 1.5em;
+}
+.quote{
+color: forestgreen;
+font-size: 1.1em;
+}
+img.iquote2{
+transform: scale(-1, -1);
+width: 1.5em;
+}
+.auteur{
+    text-align: right; 
+    margin: 20px 10px 10px 10px;  
+}
+.auteur span:first-child{
+    position: absolute;
+    margin: -7px 0px 0px -20px; 
+}
+.auteur span:last-child{
+    font-style: italic;
+    font-size: 0.9em;
+ 
+}
