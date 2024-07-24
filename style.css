@@ -58,6 +58,32 @@ img.iquote2 {
   font-style: italic;
   font-size: 0.9em;
 }
+.box-reponse{  
+  display: flex; 
+  margin: auto;
+  visibility: visible; 
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: forestgreen;
+  color: #f7f7fc;
+}
+.box-reponse::after{  
+  content: "-> Réponse <-"; 
+}
+.reponse{   
+color: black;
+background-color: white;
+visibility: hidden;
+}
+
+.hidden{
+  background-color: grey;
+  color: black;
+}
 .block-buttons {
   border-top: 1px solid grey;
   padding: 10px;
@@ -119,6 +145,7 @@ img.discord:active {
   background-color: rgb(45, 175, 45);
   box-shadow: 1px 1px 1px black;
 }
+
 
 
 
