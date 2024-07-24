@@ -2,11 +2,20 @@ const quoteText = document.querySelector(".quote"),
   quoteBtn = document.querySelector(".box-buttons button"),
   resultBtn = document.querySelector(".box-reponse"),
   resultQuote = document.querySelector(".reponse"),
-  auteurQuote = document.querySelector(".auteur .nom");
+  auteurQuote = document.querySelector(".auteur .nom"),
+  copyBtn = document.querySelector(".copy"),
+  instaBtn = document.querySelector(".insta"),
+  discordBtn = document.querySelector(".discord");
 
 quoteBtn.addEventListener("click", randomQuote);
 
+copyBtn.addEventListener("click", ()=>{
+navigator.clipboard.writeText(quoteText.innerText + "  Réponse : " +  resultQuote.innerText);
+});
+
 function randomQuote() {
+  quoteBtn.classList.add("loading");
+  quoteBtn.innerText = "Loading..";
   resultQuote.style.visibility = "collapse";
   fetch("https://api.blablagues.net/?rub=blagues")
     .then((res) => res.json())
@@ -14,7 +23,6 @@ function randomQuote() {
       console.log(result);
       quoteText.innerHTML = `${result.data.content.text_head}<br>${result.data.content.text}`;
       auteurQuote.innerHTML = `${result.data.author.pseudo}`;
-
     
 
       resultBtn.addEventListener("click", clicReponse);
@@ -31,6 +39,7 @@ function randomQuote() {
         resultBtn.style.visibility = "visible";
         console.log("ok pour le else");
       }
-      console.log(result.data.content.text_hidden);
+      quoteBtn.innerText = "Autre Blague";
+      quoteBtn.classList.remove("loading");
     });
 }

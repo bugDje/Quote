@@ -144,6 +144,7 @@ img.discord:active {
   opacity: 0.7;
 }
 .box-buttons button {
+  width: 100px;
   background-color: forestgreen;
   font-size: 1em;
   color: white;
@@ -162,6 +163,11 @@ img.discord:active {
 .box-buttons button:active {
   background-color: rgb(45, 175, 45);
   box-shadow: 1px 1px 1px black;
+}
+button.loading {
+  pointer-events: none;
+  opacity: 0.7; 
+
 }
 
 
