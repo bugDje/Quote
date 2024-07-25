@@ -109,6 +109,7 @@ visibility: collapse;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .box-buttons ul {
   list-style: none;
@@ -116,33 +117,41 @@ visibility: collapse;
 }
 .box-buttons ul li {
   display: flex;
-  height: 2em;
-  width: 2em;
+  height: 2em; 
   margin: 0 5px;
   justify-content: center;
   transition: 0.3s;
 }
 
-img.insta,
-img.copy,
-img.discord {
+
+img.copy{
   cursor: pointer;
   opacity: 0.8;
-
+  width: 31px;
 
 }
-img.insta:hover,
-img.copy:hover,
-img.discord:hover {
+
+img.copy:hover{
   opacity: 1;
   border-bottom: 1px solid transparent;  
-  
-}
-img.insta:active,
-img.copy:active,
-img.discord:active {
+  }  
+
+img.copy:active{
+  width: 30px;
   opacity: 0.7;
 }
+.copy_text {
+  margin: -15px;
+  display: flex;
+  text-align: center;
+  font-size: 0.6em;
+  width: 50px;
+  flex-direction: row;
+  align-items: center
+
+}
+
+
 .box-buttons button {
   width: 100px;
   background-color: forestgreen;

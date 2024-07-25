@@ -3,19 +3,23 @@ const quoteText = document.querySelector(".quote"),
   resultBtn = document.querySelector(".box-reponse"),
   resultQuote = document.querySelector(".reponse"),
   auteurQuote = document.querySelector(".auteur .nom"),
-  copyBtn = document.querySelector(".copy"),
-  instaBtn = document.querySelector(".insta"),
-  discordBtn = document.querySelector(".discord");
+  copyBtn = document.querySelector(".copy"), 
+  copyText = document.querySelector(".copy_text");
 
 quoteBtn.addEventListener("click", randomQuote);
 
 copyBtn.addEventListener("click", ()=>{
 navigator.clipboard.writeText(quoteText.innerText + "  Réponse : " +  resultQuote.innerText);
+copyText.innerText = "Blague copié";
+copyText.style.opacity = "0.7";
 });
+
 
 function randomQuote() {
   quoteBtn.classList.add("loading");
   quoteBtn.innerText = "Loading..";
+  copyText.innerText = "Copier la Blague";
+copyText.style.opacity = "1";
   resultQuote.style.visibility = "collapse";
   fetch("https://api.blablagues.net/?rub=blagues")
     .then((res) => res.json())
