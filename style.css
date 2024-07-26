@@ -10,6 +10,7 @@
 .box {
   width: 95%;
   margin: auto;
+  height: 100vh;
 }
 .quote-title {
   display: flex;
@@ -59,45 +60,45 @@ img.iquote2 {
   font-style: italic;
   font-size: 0.9em;
 }
-.pub{
+.pub {
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;
   font-size: 0.6em;
   color: grey;
 }
-.pub a{
+.pub a {
   color: grey;
 }
-.pub a:visited{
-  color: rgb(150, 150, 150)
+.pub a:visited {
+  color: rgb(150, 150, 150);
 }
-.box-reponse{  
+.box-reponse {
   margin-bottom: 40px;
-  visibility: hidden; 
+  visibility: hidden;
   cursor: pointer;
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
-.btn-reponse{ 
+.btn-reponse {
   width: 95%;
   position: absolute;
   border-radius: 20px;
-  padding: 10px; 
+  padding: 10px;
   border: none;
   background-color: forestgreen;
   color: #f7f7fc;
   cursor: pointer;
 }
-.reponse{ 
-text-align: center;
-cursor: default ;
-color: black;
-background-color: white;
-visibility: collapse;
+.reponse {
+  text-align: center;
+  cursor: default;
+  color: black;
+  background-color: white;
+  visibility: collapse;
 }
 
-.hidden{
+.hidden {
   background-color: grey;
   color: black;
 }
@@ -109,7 +110,6 @@ visibility: collapse;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 .box-buttons ul {
   list-style: none;
@@ -117,26 +117,24 @@ visibility: collapse;
 }
 .box-buttons ul li {
   display: flex;
-  height: 2em; 
+  height: 2em;
   margin: 0 5px;
   justify-content: center;
   transition: 0.3s;
 }
 
-
-img.copy{
+img.copy {
   cursor: pointer;
   opacity: 0.8;
   width: 31px;
-
 }
 
-img.copy:hover{
+img.copy:hover {
   opacity: 1;
-  border-bottom: 1px solid transparent;  
-  }  
+  border-bottom: 1px solid transparent;
+}
 
-img.copy:active{
+img.copy:active {
   width: 30px;
   opacity: 0.7;
 }
@@ -147,10 +145,8 @@ img.copy:active{
   font-size: 0.6em;
   width: 50px;
   flex-direction: row;
-  align-items: center
-
+  align-items: center;
 }
-
 
 .box-buttons button {
   width: 100px;
@@ -175,17 +171,21 @@ img.copy:active{
 }
 button.loading {
   pointer-events: none;
-  opacity: 0.7; 
-
+  opacity: 0.7;
 }
 
-
-
-
-
-
-
-
+.footer{ 
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  bottom: 0;
+  display: flex
+}
+div.footer span{
+  font-size: 0.8em;
+  margin: 50px 0 5px 0
+}
 
 @media only screen and (min-width: 500px) {
   .box {
@@ -193,7 +193,7 @@ button.loading {
     display: block;
     margin: 20px auto auto auto;
   }
-  .btn-reponse{ 
+  .btn-reponse {
     width: 70%;
   }
 }
