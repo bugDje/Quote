@@ -6,11 +6,18 @@
   box-sizing: border-box;
   font-family: "Protest Riot", sans-serif;
 }
+html,
+body{
+  height: 98%;
+  text-align: center;
+}
 
 .box {
+  z-index: 1;
   width: 95%;
   margin: auto;
-  height: 100vh;
+ min-height: 100%;
+ position: relative;
 }
 .quote-title {
   display: flex;
@@ -22,7 +29,9 @@
   width: 2em;
   margin-left: 10px;
 }
-
+.block-quote{
+  background-color: white;
+}
 div.box-quote {
   margin-top: 30px;
   display: flex;
@@ -37,6 +46,7 @@ img.iquote1 {
   top: 15px;
 }
 .quote {
+  text-align: left;
   color: forestgreen;
   font-size: 1.1em;
   margin: 30px;
@@ -60,19 +70,6 @@ img.iquote2 {
   font-style: italic;
   font-size: 0.9em;
 }
-.pub {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 0.6em;
-  color: grey;
-}
-.pub a {
-  color: grey;
-}
-.pub a:visited {
-  color: rgb(150, 150, 150);
-}
 .box-reponse {
   margin-bottom: 40px;
   visibility: hidden;
@@ -81,6 +78,8 @@ img.iquote2 {
   flex-direction: column;
 }
 .btn-reponse {
+  transform: translateX(-50%);
+    left: 50%;
   width: 95%;
   position: absolute;
   border-radius: 20px;
@@ -102,7 +101,8 @@ img.iquote2 {
   background-color: grey;
   color: black;
 }
-.block-buttons {
+.block-buttons { 
+  background-color: white;
   border-top: 1px solid grey;
   padding: 10px;
 }
@@ -173,18 +173,37 @@ button.loading {
   pointer-events: none;
   opacity: 0.7;
 }
-
-.footer{ 
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  bottom: 0;
-  display: flex
-}
 div.footer span{
+  bottom: 0;
+  position: absolute;
+  margin: 5px;
+}
+div.footer span:first-child{
   font-size: 0.8em;
-  margin: 50px 0 5px 0
+  color: rgb(0, 0, 0);
+  left: 0;
+ 
+}
+div.footer span:last-child{
+  cursor: pointer;
+  z-index: 0;
+  font-size: 0.6em;
+  color: grey;
+  right: 0;
+  margin: 7px;
+}
+.footer a {
+  cursor: pointer;
+  color: grey;
+}
+.footer a:visited {
+  color: grey;
+}
+.bug{
+  display: block;
+  color: transparent;
+  user-select: none;
+ 
 }
 
 @media only screen and (min-width: 500px) {
@@ -195,5 +214,20 @@ div.footer span{
   }
   .btn-reponse {
     width: 70%;
+  } 
+}
+@media only screen and (max-width: 750px) {
+ 
+  div.footer span{
+    width: 100%;
+    transform: translateX(-50%);
+  }
+  div.footer span:first-child{
+    left: 50%;
+       
+  }
+  div.footer span:last-child{  
+    left: 50%;
+    bottom: 40px;  
   }
 }
