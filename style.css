@@ -8,16 +8,20 @@
 }
 html,
 body{
-  height: 98%;
-  text-align: center;
+  height: 100%;
 }
-
+.wrapper{
+  display: flex;
+  min-height: 100%;
+  margin-bottom: -70px;
+  justify-content: center
+}
 .box {
-  z-index: 1;
-  width: 95%;
-  margin: auto;
- min-height: 100%;
- position: relative;
+  width: 600px;
+}
+.box::after {
+ content: "";
+ display: block;
 }
 .quote-title {
   display: flex;
@@ -30,7 +34,8 @@ body{
   margin-left: 10px;
 }
 .block-quote{
-  background-color: white;
+  z-index: 1;
+ background-color: white
 }
 div.box-quote {
   margin-top: 30px;
@@ -80,7 +85,7 @@ img.iquote2 {
 .btn-reponse {
   transform: translateX(-50%);
     left: 50%;
-  width: 95%;
+  width: 40%;
   position: absolute;
   border-radius: 20px;
   padding: 10px;
@@ -173,24 +178,32 @@ button.loading {
   pointer-events: none;
   opacity: 0.7;
 }
-div.footer span{
-  bottom: 0;
-  position: absolute;
-  margin: 5px;
+.footer,.box::after{
+height: 70px;
+
 }
+div.footer{
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row
+
+}
+
 div.footer span:first-child{
+  cursor: default;
   font-size: 0.8em;
-  color: rgb(0, 0, 0);
-  left: 0;
- 
+  color: rgba(0, 0, 0, 0.662);
+
+
 }
 div.footer span:last-child{
-  cursor: pointer;
-  z-index: 0;
-  font-size: 0.6em;
+  cursor: default;
+  font-size: 0.7em;
   color: grey;
-  right: 0;
-  margin: 7px;
+  margin: 1px 0;
+
 }
 .footer a {
   cursor: pointer;
@@ -199,24 +212,23 @@ div.footer span:last-child{
 .footer a:visited {
   color: grey;
 }
-.bug{
-  display: block;
-  color: transparent;
-  user-select: none;
- 
-}
 
-@media only screen and (min-width: 500px) {
-  .box {
-    width: 70%;
-    display: block;
-    margin: 20px auto auto auto;
+
+@media (max-width: 500px) {
+  div.footer{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;  
   }
-  .btn-reponse {
-    width: 70%;
-  } 
+
+  div.footer span:first-child{
+margin-bottom: 3px;
+  
+  }
 }
-@media only screen and (max-width: 750px) {
+/* @media only screen and (max-width: 750px) {
  
   div.footer span{
     width: 100%;
@@ -230,4 +242,4 @@ div.footer span:last-child{
     left: 50%;
     bottom: 40px;  
   }
-}
+} */
