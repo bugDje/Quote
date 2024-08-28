@@ -17,6 +17,7 @@ body{
   justify-content: center
 }
 .box {
+  margin-top: 20px;
   width: 600px;
 }
 .box::after {
